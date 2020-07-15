@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+<body>
+    <time datetime="2014-09-20" class="icon">
+        <em id="thu"></em>
+        <strong id="thang"></strong>
+        <span id="ngay"></span>
+      </time>      
+</body>
+<script>
+                   // Khai báo đối tượng Date
+                   var date = new Date().toLocaleString("en-US", {timeZone: "Asia/Ho_Chi_Minh"});
+            date = new Date(date);
+            // Lấy số thứ tự của ngày hiện tại
+            var thu = date.getDay();
+            var ngay = date.getDate();
+            var thang = date.getMonth();
+            // Biến lưu tên của thứ
+            var day_name = '';
+            // Lấy tên thứ của ngày hiện tại
+            switch (thu) {
+            case 0:
+                day_name = "Chủ nhật";
+                break;
+            case 1:
+                day_name = "Thứ hai";
+                break;
+            case 2:
+                day_name = "Thứ ba";
+                break;
+            case 3:
+                day_name = "Thứ tư";
+                break;
+            case 4:
+                day_name = "Thứ năm";
+                break;
+            case 5:
+                day_name = "Thứ sau";
+                break;
+            case 6:
+                day_name = "Thứ bảy";
+            }
+            document.getElementById('thu').innerHTML = day_name;
+            document.getElementById('ngay').innerHTML = ngay;
+            document.getElementById('thang').innerHTML = 'Tháng '+thang;  
+</script>
+</html>
