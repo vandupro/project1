@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  body {
+    background: #fff;
+    color: #444;
+    font-family: "Open Sans", sans-serif;
+}
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+
+#topbar {
+    padding: 0 0 10px 0;
+    font-size: 14px;
+    transition: all 0.5s;
+  }
+  
+  #topbar .social-links {
+    text-align: right;
+  }
+  
+  #topbar .social-links a {
+    color: #535074;
+    padding: 4px 12px;
+    display: inline-block;
+    line-height: 1px;
+  }
+  
+  #topbar .social-links a:hover {
+    color: #1bb1dc;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  
+  #header {
+    height: 110px;
+    z-index: 997;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+  }
+  
+
+  #header .logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo h1 a,
+  #header .logo h1 a:hover {
+    color: #413e66;
+    text-decoration: none;
+  }
+   /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  .nav,
+  .nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav > ul > li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+  }
+  
+  .nav a {
+    display: block;
+    position: relative;
+    color: #413e66;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .nav a:hover,
+  .nav .active > a,
+  .nav li:hover > a {
+    color: #1bb1dc;
+    text-decoration: none;
+  }
+  
+  .nav .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 30px);
+    z-index: 99;
+    opacity: 0;
+     visibility: hidden; /*chế độ ẩn tương tự display:none */
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s; /*hiệu úng chuyển động trong 0.3s */
+  }
+  
+  .nav .drop-down:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible; /*chế độ hiện tương tự display:block */
+  }
+  
+  .nav .drop-down li {
+    min-width: 180px;
+    position: relative;
+  }
+  
+  .nav .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #065e77;
+  }
+  
+  .nav .drop-down ul a:hover,
+  .nav .drop-down ul .active > a,
+  .nav .drop-down ul li:hover > a {
+    color: #1bb1dc;
+  }
+  
+  /* .nav .drop-down > a:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+  } */
+  
+  .nav .drop-down .drop-down ul {
+    top: 0;
+    left:30%;
+    opacity: 0;
+    transition: ease all 1s;
+  }
+  
+  .nav .drop-down .drop-down:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    
+    
+  }
+  
+  .nav .drop-down .drop-down > a {
+    padding-right: 35px;
+  }
+  
+  /* .nav .drop-down .drop-down > a:after {
+    content: "\f105";
+    position: absolute;
+    right: 15px;
+  } */
+   /*--------------------------------------------------------------
+  !end Navigation Menu
+  --------------------------------------------------------------*/
+  
+
+
+
+
+ #home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+    background-size: cover;
+  }
+  
+ #home .order-md-first h2 {
+    color: #413e66;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+ #home .order-md-first h2 span {
+    color: #1bb1dc;
+  }
+  
+ #home .order-md-first .btn,
+ #home .order-md-first .btn-services {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1bb1dc;
+    color: #fff;
+  }
+  
+ #home .order-md-first .btn:hover{
+    background: #0a98c0 !important;
+  }
+  
+ 
+  
+  /* Desktop Navigation */
+  
+ 
+  
+  .
+  /* Mobile Navigation */
+  
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    left: -260px;
+    width: 260px;
+    padding-top: 18px;
+    background: rgba(40, 38, 70, 0.8);
+    transition: 0.4s;
+  }
+  
+  .mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .mobile-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+  }
+  
+  .mobile-nav a:hover,
+  .mobile-nav .active > a,
+  .mobile-nav li:hover > a {
+    color: #8dc2fa;
+    text-decoration: none;
+  }
+  
+  .mobile-nav .drop-down > a:after {
+    content: "\f078";
+    font-family: FontAwesome;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+  }
+  
+  .mobile-nav .active.drop-down > a:after {
+    content: "\f077";
+  }
+  
+  .mobile-nav .drop-down > a {
+    padding-right: 35px;
+  }
+  
+  .mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+  }
+  
+  .mobile-nav .drop-down li {
+    padding-left: 20px;
+  }
+  
+  .mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  .mobile-nav-toggle i {
+    margin: 18px 18px 0 0;
+    color: #065e77;
+  }
+  
+  .mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(40, 38, 70, 0.8);
+    overflow: hidden;
+    display: none;
+  }
+  
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+  
+  .mobile-nav-active .mobile-nav {
+    left: 0;
+  }
+  
+  .mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+  }
+  
