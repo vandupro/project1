@@ -17,11 +17,33 @@
        if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
          document.getElementById("header").classList.add("mystyle");
 
-       } else {
+       } 
+       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("back-to-top").style.display = "block";
+
+      } 
+       else {
          document.getElementById("header").classList.remove("mystyle");
        }
      }
      // <---------END cuộn MENU------>
+    //<<--------------back-to-top-------------->>
+      $(document).ready(function ($) {
+              $(window).scroll(function () {
+                  var e = $(window).scrollTop();
+                  if (e > 300) {
+                      $(".btn-top").show()
+                  } else {
+                      $(".btn-top").hide()
+                  }
+              });
+              $(".btn-top").click(function () {
+                  $('body,html').animate({
+                      scrollTop: 0
+                  })
+              })
+      });
+//<<--------------! END-back-to-top-------------->>
 
 
      //                    <!-- menu reposive -->
@@ -46,3 +68,8 @@
       } 
 
       //                     <!-- End menu reposive -->
+
+
+
+      
+    
